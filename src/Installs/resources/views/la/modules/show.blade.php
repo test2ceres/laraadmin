@@ -147,7 +147,7 @@ use Dwij\Laraadmin\Models\ModuleFields;
 				<span class="pull-left">Module Access for Roles</span>
 				<i class="fa fa-circle gray"></i> Invisible <i class="fa fa-circle orange"></i> Read-Only <i class="fa fa-circle green"></i> Write
 			</div>
-			<form action="{{ url(config('laraadmin.adminRoute') . '/save_role_module_permissions/'.$module->id) }}" method="post">
+			<form action="{{ url(config('laraadmin.adminRoute') . '/' . \Lang::getLocale() . '/save_role_module_permissions/'.$module->id) }}" method="post">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				<table class="table table-bordered dataTable no-footer table-access">
 					<thead>
