@@ -291,9 +291,9 @@ class Module extends Model
                 break;
             case 'Currency':
                 if($update) {
-                    $var = $table->double($field->colname, 15, 2)->change();
+                    $var = $table->double($field->colname, 8, 2)->change();
                 } else {
-                    $var = $table->double($field->colname, 15, 2);
+                    $var = $table->double($field->colname, 8, 2);
                 }
                 if($field->defaultvalue != "") {
                     $var->default($field->defaultvalue);
